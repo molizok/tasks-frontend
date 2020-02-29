@@ -1,0 +1,32 @@
+<div class="accordion">
+  <div class="card">
+      <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+              Create New Task
+          </h5>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+              <form class="form">
+                  <div class="form-group">
+                      <label class="sr-only" for="inlineFormInputName2">Title</label>
+                      <input type="text" class="form-control mb-2 mr-sm-2" id="taskName"
+                          placeholder="Insert the task name" [(ngModel)]="task.title" [ngModelOptions]="{standalone: true}" >
+                  </div>
+
+                  <div class="form-group">
+                      <label class="sr-only" for="inlineFormInputGroupUsername2">Description</label>
+                      <textarea id="story" [ngModelOptions]="{standalone: true}"  [(ngModel)]="task.description" name="story" class="form-control" rows="6" cols="33" placeholder="Insert description for the task"></textarea>
+                  </div>
+
+                  <div class="form-group text-right">
+                    <button class='btn btn-warning' (click)="onCancel()" >Cancel</button>
+                    <button class='btn btn-primary ml-3' (click)="onCreate()" >Create</button>
+                  </div>
+
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 mt-2" *ngFor="let task of tasks; index as i;">
+      <div class="card border-primary mb-3">
+        <div class="card-body text-primary">
+          <h5 class="card-title">
+            <div class="inputGroup">
+              <input id="input_check_{{ i }}" name="input_check_{{ i }}" type="checkbox" [(ngModel)]="task.status" (click)="changeStatusTask(i);"/>
+              <label for="input_check_{{ i }}">  {{ task.title }}  </label>
+            </div>
+          </h5>
+          <p class="card-text"> {{ task.description }} </p>
+          <button class="btn btn-danger task-btn-remove ">Remove</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
